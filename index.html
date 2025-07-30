@@ -1,0 +1,472 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Anime World</title>
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" />
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.5/font/bootstrap-icons.css" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+  <link rel="stylesheet" href="css/styles.css" />
+  <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+  <script src="js/script.js" defer></script>
+</head>
+<body>
+
+<!-- Intro Screen -->
+<div id="intro-screen">
+  <div class="intro-content text-center">
+    <h1 class="mb-4 intro-heading">Welcome to Anime World</h1>
+    <button id="enter-btn" class="btn btn-orange btn-lg"><i class="fas fa-play"></i> Enter Site</button>
+  </div>
+</div>
+
+<div id="main-site" style="display: none;">
+
+<!-- Navigation Bar -->
+<nav class="navbar navbar-expand-lg navbar-light bg-white shadow-sm py-2 sticky-top border-bottom">
+  <div class="container">
+    <a class="navbar-brand fw-bold text-dark d-flex align-items-center" href="index.html">
+      <img src="images/logo.png" alt="Anime World" width="60" height="60" class="me-2 rounded-circle">
+      Anime World
+    </a>
+    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="collapse navbar-collapse" id="navbarNav">
+      <ul class="navbar-nav ms-auto">
+        <li class="nav-item"><a class="nav-link text-dark fw-semibold" href="index.html">Home</a></li>
+        <li class="nav-item"><a class="nav-link text-dark fw-semibold" href="characters.html">Characters</a></li>
+        <li class="nav-item"><a class="nav-link text-dark fw-semibold" href="genres.html">Genres</a></li>
+        <li class="nav-item"><a class="nav-link text-dark fw-semibold" href="top-anime.html">Top Anime</a></li>
+        <li class="nav-item"><a class="nav-link text-dark fw-semibold" href="studios.html">Studios</a></li>
+        <li class="nav-item"><a class="nav-link text-dark fw-semibold" href="reviews.html">Reviews</a></li>
+        <li class="nav-item"><a class="nav-link text-dark fw-semibold" href="about.html">About</a></li>
+        <li class="nav-item"><a class="nav-link text-dark fw-semibold" href="contact.html">Contact</a></li>
+      </ul>
+    </div>
+  </div>
+</nav>
+
+
+
+  <!-- Header Section -->
+  <header class="bg-light text-dark text-center py-2 border-bottom">
+<div id="animeCarousel" class="carousel slide" data-bs-ride="carousel" data-bs-interval="4000">
+  <div class="carousel-inner">
+
+    <div class="carousel-indicators">
+  <button type="button" data-bs-target="#animeCarousel" data-bs-slide-to="0" class="active"></button>
+  <button type="button" data-bs-target="#animeCarousel" data-bs-slide-to="1"></button>
+  <button type="button" data-bs-target="#animeCarousel" data-bs-slide-to="2"></button>
+  <button type="button" data-bs-target="#animeCarousel" data-bs-slide-to="3"></button>
+  <button type="button" data-bs-target="#animeCarousel" data-bs-slide-to="4"></button>
+</div>
+
+
+    <div class="carousel-item active">
+  <img src="images/bleach-cover.jpg" class="d-block w-100 carousel-img" alt="Bleach">
+  <div class="carousel-caption d-sm-block">
+    <h5>Ichigo Kurosaki</h5>
+    <p>Wield the Zanpakuto and protect both worlds!</p>
+  </div>
+</div>
+<div class="carousel-item">
+  <img src="images/goku-cover.jpg" class="d-block w-100 carousel-img" alt="Dragon Ball Z">
+  <div class="carousel-caption d-sm-block">
+    <h5>Son Goku</h5>
+    <p>Unleash your power and defend the universe!</p>
+  </div>
+</div>
+    <div class="carousel-item">
+      <img src="images/naruto-cover.jpg" class="d-block w-100 carousel-img" alt="Naruto">
+      <div class="carousel-caption d-sm-block">
+        <h5>Naruto Uzumaki</h5>
+        <p>Believe it! Explore Naruto’s world and ninja journey.</p>
+      </div>
+    </div>
+    <div class="carousel-item">
+      <img src="images/eren-yeager-cover.jpg" class="d-block w-100 carousel-img" alt="AOT">
+      <div class="carousel-caption d-sm-block">
+        <h5>Eren Yeager</h5>
+        <p>Fight for humanity behind the walls!</p>
+      </div>
+    </div>
+    <div class="carousel-item">
+  <img src="images/luffy-cover.jpg" class="d-block w-100 carousel-img" alt="One Piece">
+  <div class="carousel-caption d-sm-block">
+    <h5>Monkey D. Luffy</h5>
+    <p>Set sail for the Grand Line in search of One Piece!</p>
+  </div>
+</div>
+  </div>
+
+  <!-- Header Buttons -->
+  <button class="carousel-control-prev" type="button" data-bs-target="#animeCarousel" data-bs-slide="prev">
+    <span class="carousel-control-prev-icon"></span>
+  </button>
+  <button class="carousel-control-next" type="button" data-bs-target="#animeCarousel" data-bs-slide="next">
+    <span class="carousel-control-next-icon"></span>
+  </button>
+</div>
+
+  </header>
+
+  <!-- Content Section -->
+  <main class="container my-5">
+
+    <h2 class="text-center mb-4 fw-bold ">Featured Anime <span class="featured-span">Check out some of our most popular shows</span></h2>
+    <div class="row">
+  <!-- Naruto -->
+<div class="col-md-4 mb-4">
+  <div class="card anime-card h-100">
+    <div class="position-relative">
+      <img src="images/naruto.jpg" class="card-img-top" alt="Naruto">
+
+      <!-- Crunchyroll Icon -->
+      <a href="https://www.crunchyroll.com/series/GY9PJ5KWR/naruto?srsltid=AfmBOor5-v-p-XkVVTwSHVCW7E6zqdIHlck-BrcxSv0jkUzImnDBH55C" target="_blank" class="crunchyroll-icon">
+        <img src="images/crunchyroll-icon.png" alt="crunchyroll-icon">
+      </a>
+    </div>
+    <div class="card-body">
+      <h5 class="card-title">Naruto</h5>
+      <div class="star-rating mb-2">
+        <span class="star filled">&#9733;</span>
+        <span class="star filled">&#9733;</span>
+        <span class="star filled">&#9733;</span>
+        <span class="star">&#9733;</span>
+        <span class="star">&#9733;</span>
+      </div>
+      <p class="card-text fs-6">Follow the journey of Naruto Uzumaki, a young ninja with dreams of becoming Hokage despite being shunned by his village.</p>
+      <a href="reviews.html" class="btn btn-orange">Read Review</a>
+    </div>
+  </div>
+</div>
+
+
+  <!-- Attack on Titan -->
+  <div class="col-md-4 mb-4">
+    <div class="card anime-card h-100">
+          <div class="position-relative">
+      <img src="images/aot.jpg" class="card-img-top" alt="Attack on Titan">
+
+      <!-- Crunchyroll Icon -->
+      <a href="https://www.crunchyroll.com/series/GR751KNZY/attack-on-titan?srsltid=AfmBOooqsQmL8NPZi72VL4eeuuZfI4uxhxB8HtVglsw3QnBRluMENltl" target="_blank" class="crunchyroll-icon">
+        <img src="images/crunchyroll-icon.png" alt="crunchyroll-icon">
+      </a>
+    </div>
+      <div class="card-body">
+        <h5 class="card-title">Attack on Titan</h5>
+                <div class="star-rating mb-2">
+  <span class="star filled">&#9733;</span>
+  <span class="star filled">&#9733;</span>
+  <span class="star filled">&#9733;</span>
+  <span class="star">&#9733;</span>
+  <span class="star">&#9733;</span>
+</div>
+        <p class="card-text fs-6">A dark world where humanity hides behind walls from man-eating titans. Join Eren and the Survey Corps as they fight for survival.</p>
+        <a href="reviews.html" class="btn btn-orange">Read Review</a>
+      </div>
+    </div>
+  </div>
+
+  <!-- Death Note -->
+  <div class="col-md-4 mb-4">
+    <div class="card anime-card h-100">
+            <div class="position-relative">
+            <img src="images/deathnotes.jpg" class="card-img-top" alt="Death Note">
+
+      <!-- Crunchyroll Icon -->
+      <a href="https://www.crunchyroll.com/series/G6QWD3EE6/death-note?srsltid=AfmBOorVTZs9hbnljJ4Y1loJ77pRJSv3etihxgmNQmwY8UEkk_vqJ-cA" target="_blank" class="crunchyroll-icon">
+        <img src="images/crunchyroll-icon.png" alt="crunchyroll-icon">
+      </a>
+    </div>
+      <div class="card-body">
+        <h5 class="card-title">Death Note</h5>
+                <div class="star-rating mb-2">
+  <span class="star filled">&#9733;</span>
+  <span class="star filled">&#9733;</span>
+  <span class="star filled">&#9733;</span>
+  <span class="star">&#9733;</span>
+  <span class="star">&#9733;</span>
+</div>
+        <p class="card-text fs-6">When Light Yagami finds a notebook that kills anyone whose name is written in it, he begins a twisted journey to become a god.</p>
+        <a href="reviews.html" class="btn btn-orange">Read Review</a>
+      </div>
+    </div>
+  </div>
+
+  <!-- Demon Slayer -->
+  <div class="col-md-4 mb-4">
+    <div class="card anime-card h-100">
+          <div class="position-relative">
+      <img src="images/demonslayer.jpg" class="card-img-top" alt="Demon Slayer">
+
+      <!-- Crunchyroll Icon -->
+      <a href="https://www.crunchyroll.com/series/GY5P48XEY/demon-slayer-kimetsu-no-yaiba" target="_blank" class="crunchyroll-icon">
+        <img src="images/crunchyroll-icon.png" alt="crunchyroll-icon">
+      </a>
+    </div>
+      <div class="card-body">
+        <h5 class="card-title">Demon Slayer</h5>
+                <div class="star-rating mb-2">
+  <span class="star filled">&#9733;</span>
+  <span class="star filled">&#9733;</span>
+  <span class="star filled">&#9733;</span>
+  <span class="star">&#9733;</span>
+  <span class="star">&#9733;</span>
+</div>
+        <p class="card-text fs-6">Tanjiro Kamado battles demons after his family is slaughtered and his sister Nezuko is turned into a demon. A tale of resilience and swordsmanship.</p>
+        <a href="reviews.html" class="btn btn-orange">Read Review</a>
+      </div>
+    </div>
+  </div>
+
+  <!-- One Piece -->
+  <div class="col-md-4 mb-4">
+    <div class="card anime-card h-100">
+              <div class="position-relative">
+          <img src="images/onepiece.png" class="card-img-top" alt="One Piece">
+
+      <!-- Crunchyroll Icon -->
+      <a href="https://www.crunchyroll.com/series/GRMG8ZQZR/one-piece?srsltid=AfmBOooceRHGFkCb7Dbn8oPDWjS6YOnCnIIHzZFQMig0T8fLDeOqdNgn" target="_blank" class="crunchyroll-icon">
+        <img src="images/crunchyroll-icon.png" alt="crunchyroll-icon">
+      </a>
+    </div>
+      <div class="card-body">
+        <h5 class="card-title">One Piece</h5>
+                <div class="star-rating mb-2">
+  <span class="star filled">&#9733;</span>
+  <span class="star filled">&#9733;</span>
+  <span class="star filled">&#9733;</span>
+  <span class="star">&#9733;</span>
+  <span class="star">&#9733;</span>
+</div>
+        <p class="card-text fs-6">Set sail with Monkey D. Luffy and his crew on a grand adventure to find the legendary treasure, One Piece, in a world full of pirates and powers.</p>
+        <a href="reviews.html" class="btn btn-orange">Read Review</a>
+      </div>
+    </div>
+  </div>
+
+  <!-- My Hero Academia -->
+  <div class="col-md-4 mb-4">
+    <div class="card anime-card h-100">
+          <div class="position-relative">
+      <img src="images/mha.jpg" class="card-img-top" alt="My Hero Academia">
+
+      <!-- Crunchyroll Icon -->
+      <a href="https://www.crunchyroll.com/series/G6NQ5DWZ6/my-hero-academia?srsltid=AfmBOoqulrdO1ao0MghFpJJobyi5Nhitiq19BIhOcZM7l64-YVhO2m3X" target="_blank" class="crunchyroll-icon">
+        <img src="images/crunchyroll-icon.png" alt="crunchyroll-icon">
+      </a>
+    </div>
+      <div class="card-body">
+        <h5 class="card-title">My Hero Academia</h5>
+                <div class="star-rating mb-2">
+  <span class="star filled">&#9733;</span>
+  <span class="star filled">&#9733;</span>
+  <span class="star filled">&#9733;</span>
+  <span class="star">&#9733;</span>
+  <span class="star">&#9733;</span>
+</div>
+        <p class="card-text fs-6">In a world where most people have superpowers, follow Izuku Midoriya, a powerless boy who inherits the strength to become a hero.</p>
+        <a href="reviews.html" class="btn btn-orange">Read Review</a>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- Most Watched Shows -->
+  <h3 class="mb-3 fw-bold text-center py-4">
+  Most Watched Shows
+  <span class="ms-span">
+    Top 10 Most Watched Anime Series
+  </span>
+</h3>
+
+
+<div class="scroll-container position-relative">
+  <!-- Left Scroll Button -->
+  <button class="scroll-btn left" id="scrollLeft">
+    <span class="carousel-control-prev-icon"></span>
+  </button>
+
+  <!-- Scrollable Cards -->
+  <div class="d-flex overflow-auto scroll-wrapper px-2" id="scrollRow">
+    
+    <div class="watch-card me-3">
+      <img src="images/narutomw.jpg" alt="Naruto">
+      <div class="watch-info">
+        <h6>Naruto</h6>
+        <a href="https://www.crunchyroll.com/series/GYEXQKJG6/naruto" target="_blank">Watch Now</a>
+      </div>
+    </div>
+
+    <div class="watch-card me-3">
+      <img src="images/onepiecemw.jpg" alt="One Piece">
+      <div class="watch-info">
+        <h6>One Piece</h6>
+        <a href="https://www.crunchyroll.com/series/GRMG8ZQZR/one-piece" target="_blank">Watch Now</a>
+      </div>
+    </div>
+
+    <div class="watch-card me-3">
+      <img src="images/demonslayermw.jpeg" alt="Demon Slayer">
+      <div class="watch-info">
+        <h6>Demon Slayer</h6>
+        <a href="https://www.crunchyroll.com/series/GY5P48XEY/demon-slayer-kimetsu-no-yaiba" target="_blank">Watch Now</a>
+      </div>
+    </div>
+
+
+<div class="watch-card me-3">
+  <img src="images/aot.jpg" alt="Attack on Titan">
+  <div class="watch-info">
+    <h6>Attack on Titan</h6>
+    <a href="https://www.crunchyroll.com/series/GR751KNZY/attack-on-titan" target="_blank">Watch Now</a>
+  </div>
+</div>
+
+
+<div class="watch-card me-3">
+  <img src="images/opmmw.jpeg" alt="One Punch Man">
+  <div class="watch-info">
+    <h6>One Punch Man</h6>
+    <a href="https://www.crunchyroll.com/series/G63K98PZ6/one-punch-man" target="_blank">Watch Now</a>
+  </div>
+</div>
+
+
+<div class="watch-card me-3">
+  <img src="images/mhamw.png" alt="My Hero Academia">
+  <div class="watch-info">
+    <h6>My Hero Academia</h6>
+    <a href="https://www.crunchyroll.com/series/G6NQ5DWZ6/my-hero-academia" target="_blank">Watch Now</a>
+  </div>
+</div>
+
+
+<div class="watch-card me-3">
+  <img src="images/jkmw.jpeg" alt="Jujutsu Kaisen">
+  <div class="watch-info">
+    <h6>Jujutsu Kaisen</h6>
+    <a href="https://www.crunchyroll.com/series/GRDV0019R/jujutsu-kaisen" target="_blank">Watch Now</a>
+  </div>
+</div>
+
+
+<div class="watch-card me-3">
+  <img src="images/tokyomw.jpeg" alt="Tokyo Ghoul">
+  <div class="watch-info">
+    <h6>Tokyo Ghoul</h6>
+    <a href="https://www.crunchyroll.com/series/GY8VEQ95Y/tokyo-ghoul" target="_blank">Watch Now</a>
+  </div>
+</div>
+
+
+<div class="watch-card me-3">
+  <img src="images/deathnotemw.jpg" alt="Death Note">
+  <div class="watch-info">
+    <h6>Death Note</h6>
+    <a href="https://www.crunchyroll.com/series/GYVHN2W0Y/death-note" target="_blank">Watch Now</a>
+  </div>
+</div>
+
+
+<div class="watch-card me-3">
+  <img src="images/bleachmw.jpg" alt="Bleach">
+  <div class="watch-info">
+    <h6>Bleach</h6>
+    <a href="https://www.crunchyroll.com/series/G63K0KNZY/bleach" target="_blank">Watch Now</a>
+  </div>
+</div>
+
+
+  </div>
+
+  <!-- Right Scroll Button -->
+  <button class="scroll-btn right" id="scrollRight">
+    <span class="carousel-control-next-icon"></span>
+  </button>
+</div>
+
+<!-- Favorite Character Section -->
+
+<section id="characters" class="container my-5 text-center">
+  <h2 class="mb-3 fw-bold text-center py-2">Meet Your Favorite Characters<span class="char-span">Explore 3D models of your favorite anime legends — Naruto, Goku, Luffy, and more!</span></h2>
+
+  <div class="row justify-content-center g-4">
+    <div class="col-md-3">
+      <div class="card character-card h-100 glassy text-white">
+        <img src="images/3d-naruto.png" class="card-img-top" alt="Naruto">
+        <div class="card-body">
+          <h5 class="card-title">Naruto Uzumaki</h5>
+          <a href="character-naruto.html"  class="stretched-link"></a>
+        </div>
+      </div>
+    </div>
+    <div class="col-md-3">
+      <div class="card character-card h-100 glassy text-white">
+        <img src="images/3d-goku.jpg" class="card-img-top" alt="Goku">
+        <div class="card-body">
+          <h5 class="card-title">Son Goku</h5>
+          <a href="character-goku.html"  class="stretched-link"></a>
+        </div>
+      </div>
+    </div>
+    <div class="col-md-3">
+      <div class="card character-card h-100 glassy text-white">
+        <img src="images/3d-luffy.jpg" class="card-img-top" alt="Luffy">
+        <div class="card-body">
+          <h5 class="card-title">Monkey D. Luffy</h5>
+          <a href="character-luffy.html"  class="stretched-link"></a>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <a href="characters.html" class="btn btn-orange mt-5 px-4 py-2">View All 3D Characters</a>
+</section>
+
+
+
+<!-- Quotes Section -->
+<h4 class="text-center fw-bold mt-5 ">Quotes of the Day</h4>
+<div id="anime-quote" class="text-center mt-4"></div>
+
+  </main>
+
+<!-- Audio And Toggle Button -->
+<audio id="bg-music" loop autoplay>
+  <source src="audio/music.mp3" type="audio/mpeg">
+</audio>
+
+<button id="music-toggle" class="music-toggle-btn">
+  <i class="fas fa-volume-up"></i>
+</button>
+
+
+
+<!-- Footer -->
+<footer class="bg-light text-center py-4 border-top">
+  <div class="container">
+    <h5 class="mb-3">Connect With Us</h5>
+    <div class="mb-3">
+      <a href="#" target="_blank" class="social-icon"><i class="fab fa-youtube"></i></a>
+      <a href="#" target="_blank" class="social-icon"><i class="fab fa-facebook"></i></a>
+      <a href="#" target="_blank" class="social-icon"><i class="fab fa-x-twitter"></i></a>
+      <a href="#" target="_blank" class="social-icon"><i class="fab fa-instagram"></i></a>
+      <a href="#" target="_blank" class="social-icon"><i class="fab fa-tiktok"></i></a>
+    </div>
+    <p class="mb-0">&copy; 2025 Anime World. All rights reserved.</p>
+  </div>
+</footer>
+
+</div>
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+</html>
+
+
+
+
+

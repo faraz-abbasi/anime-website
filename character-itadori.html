@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Yuji Itadori – Character Profile</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
+  <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" rel="stylesheet">
+  <script type="module" src="https://unpkg.com/@google/model-viewer/dist/model-viewer.min.js"></script>
+  <link rel="stylesheet" href="css/styles.css">
+  <script src="js/script.js" defer></script>
+</head>
+
+<body>
+  <button class="btn btn-orange go-back-btn" onclick="history.back()">
+    <i class="fas fa-arrow-left"></i>
+  </button>
+
+  <main class="container py-5">
+    
+    <div class="profile-header">
+      <h1 class="display-5 fw-bold character-text-orange">Yuji Itadori</h1>
+      <p class="lead">A vessel for Sukuna, driven by compassion and justice.</p>
+    </div>
+
+    <div class="row align-items-center mb-5">
+      <div class="col-md-6 mb-4 mb-md-0">
+        <div class="model-container">
+          <div class="model-spinner" id="spinner-itadori"></div>
+
+          <model-viewer 
+            src="models/itadori.glb"
+            alt="Yuji Itadori"
+            auto-rotate 
+            camera-controls 
+            autoplay
+            animation-name="*"
+            class="model-viewer-character"
+            onload="document.getElementById('spinner-itadori').classList.add('hide-spinner')">
+          </model-viewer>
+        </div>
+      </div>
+
+      <div class="col-md-6 character-info">
+        <h3 class="character-text-orange">Character Overview</h3>
+        <p>Yuji Itadori is the main protagonist of <em>Jujutsu Kaisen</em>. After swallowing a cursed object containing the King of Curses—Ryomen Sukuna—Yuji becomes his vessel. Despite the dangerous power he hosts, Yuji maintains a kind heart and strong resolve to help others and give meaning to the lives of those around him.</p>
+
+        <h4 class="mt-4">Notable Traits</h4>
+        <ul>
+          <li>Vessel of Ryomen Sukuna</li>
+          <li>Exceptional physical strength and agility</li>
+          <li>User of Divergent Fist and Black Flash</li>
+        </ul>
+
+        <h4 class="mt-4">Series</h4>
+        <p><strong>Jujutsu Kaisen</strong> and <strong>Jujutsu Kaisen 0</strong> (movie)</p>
+
+        <a href="https://www.crunchyroll.com/series/GRDV0019R/jujutsu-kaisen" target="_blank" class="btn btn-orange mt-3"><i class="fas fa-play-circle"></i> Watch Now</a>
+      </div>
+    </div>
+  </main>
+
+<audio id="bg-music" loop autoplay>
+  <source src="audio/music.mp3" type="audio/mpeg">
+</audio>
+
+<button id="music-toggle" class="music-toggle-btn">
+  <i class="fas fa-volume-up"></i>
+</button>
+  
+
+  <!-- Footer -->
+  <footer class="bg-light text-center py-4 border-top">
+    <div class="container">
+      <h5 class="mb-3">Connect With Us</h5>
+      <div class="mb-3">
+        <a href="#" target="_blank" class="social-icon"><i class="fab fa-youtube"></i></a>
+        <a href="#" target="_blank" class="social-icon"><i class="fab fa-facebook"></i></a>
+        <a href="#" target="_blank" class="social-icon"><i class="fab fa-x-twitter"></i></a>
+        <a href="#" target="_blank" class="social-icon"><i class="fab fa-instagram"></i></a>
+        <a href="#" target="_blank" class="social-icon"><i class="fab fa-tiktok"></i></a>
+      </div>
+      <p class="mb-0">&copy; 2025 Anime World. All rights reserved.</p>
+    </div>
+  </footer>
+
+</body>
+</html>
